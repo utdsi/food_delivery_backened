@@ -63,7 +63,7 @@ ResturantRouter.patch("/api/restaurants/:id/menu",async(req,res)=>{
         let newdata=addmenu.push(newMenu);
         let menu=restData.menu;
         let addDb=await Resturantmodel.findByIdAndUpdate({_id:id},restData)
-        res.status(201).send({"msg":"new menu added"})
+        res.status(200).send({"msg":"new menu added"})
     } catch (error) {
         console.log(error);
         res.status(501).send({"msg":error})
@@ -83,7 +83,7 @@ ResturantRouter.delete("/api/restaurants/:id/menu/:mid",async(req,res)=>{
        data.menu=newdata
     console.log(data);
        let Deletdatamanu=await Resturantmodel.findByIdAndUpdate({_id:id},data);
-        res.status(201).send({"msg":"particular menu deleted"})
+        res.status(200).send({"msg":"particular menu deleted"})
     } catch (error) {
         console.log(error);
         res.status(501).send({"msg":error})
@@ -131,7 +131,7 @@ ResturantRouter.post("/api/orders",authentication,async(req,res)=>{
         };
         let savedOrderdata=new OrderModel(orderPost);
         await savedOrderdata.save()
-        res.status(201).send({"msg":"order has been made"})
+        res.status(200).send({"msg":"order has been made"})
     } catch (error) {
         console.log(error);
         res.status(501).send({"msg":error})
