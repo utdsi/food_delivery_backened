@@ -6,7 +6,7 @@ const {UserRouter}=require("./Router/User")
 const {ResturantRouter}=require("./Router/resurant");
 app.use(express.json());
 app.get("/",(req,res)=>{
-    res.send("deployed succefull")
+    res.send("welcome to our food delivery app")
 })
 
 app.use(UserRouter);
