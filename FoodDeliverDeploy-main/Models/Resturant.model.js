@@ -19,6 +19,4 @@ const ResturantSchema=mongoose.Schema({
 
 const Resturantmodel=mongoose.model("resturant",ResturantSchema);
 
-module.exports={
-    Resturantmodel
-}
+module.exports={ Resturantmodel}
