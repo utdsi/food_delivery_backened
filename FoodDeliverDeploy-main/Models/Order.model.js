@@ -18,7 +18,10 @@ const OrderSchema=mongoose.schema(
         country: String,
         zip: String
       },
-      status: String // e.g, "placed", "preparing", "on the way", "delivered"
+      status: {
+          type:String,
+          enum:["placed", "preparing", "on the way", "delivered"],
+          default: "placed"// e.g, ("placed", "preparing", "on the way", "delivered")
    }
 );
 
