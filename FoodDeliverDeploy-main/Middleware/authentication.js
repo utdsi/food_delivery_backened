@@ -1,4 +1,4 @@
-const jwt=require("jsonwebtoken");
+const jwt=require("jsonwebtoken")
 require('dotenv').config();
 
 const authentication=(req,res,next)=>{
@@ -11,7 +11,7 @@ const authentication=(req,res,next)=>{
         req.body.userid=decoded.userid;
         next()
     }else{
-        res.status(501).send({"msg":"Invalid login credetinals"})
+        res.status(500).send({"msg":"Invalid login credetinals"})
     }
 };
 
