@@ -15,6 +15,4 @@ const UserSchema=mongoose.Schema({
 
 const Usermodel=mongoose.model("user",UserSchema);
 
-module.exports={
-    Usermodel
-}
+module.exports={Usermodel}
