@@ -19,7 +19,7 @@ UserRouter.post("/api/register",async(req,res)=>{
                 }else{
                     let stroedData=new Usermodel({name,email,password:hash,address});
                     await stroedData.save();
-                    res.status(201).send({"msg":"registered successfully"})                   
+                    res.status(200).send({"msg":"registered successfully"})                   
                 }
             })
         }
